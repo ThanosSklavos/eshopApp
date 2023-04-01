@@ -27,7 +27,7 @@ $(document).ready(function(){               //με το που διαβαζει 
     let email = $("#email").val();
     let area =  $("#area").val();
     let road =  $("#road").val();
-
+    console.log( area + road)
     const item = {
       'username': username,
       'password': password,
@@ -46,9 +46,9 @@ $(document).ready(function(){               //με το που διαβαζει 
       type: "post",
       data: item,
       dataType: "JSON",
-      // encode: true,
+     //encode: true
     })
-    .done( function(response) {
+    .done(function(response) {
       // console.log(">>", response);
       
       let data = response.data;
@@ -105,6 +105,15 @@ function createTbody(data){
 
     $("#userTable tbody").append(tr_str);
   }
+
+  $('#userTable tbody').on('click', '.btnDelete', function() {
+    let username = $(this).val();
+    $.ajax({
+        url: `http://localhost:3000/api/user/delete/${username}`,
+        type: 'delete'
+    })
+    location.reload();
+})
 }
 
 function alert(status, message){

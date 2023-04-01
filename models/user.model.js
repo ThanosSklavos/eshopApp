@@ -15,7 +15,7 @@ let addressSchema = new Schema({
 
 let phoneSchema = new Schema({
     type: { type: String },
-    number: { number: String }
+    number: { type: Number }
 }, { _id: false })
 
 let productSchema = new Schema({

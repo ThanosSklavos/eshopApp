@@ -34,10 +34,6 @@ body {
     color: black!important;
 }
 
-.bg-dark {
-    background-color: #006994!important;
-}
-
 header {
     background-image: url(../images/header.jpg);
     background-size:cover;
