@@ -27,7 +27,7 @@ $(document).ready(function(){               //με το που διαβαζει 
     let email = $("#email").val();
     let area =  $("#area").val();
     let road =  $("#road").val();
-    console.log( area + road)
+
     const item = {
       'username': username,
       'password': password,

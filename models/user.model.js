@@ -58,7 +58,7 @@ let userSchema = new Schema(
             //validate: [validateEmail, 'Email address is not valid']
             match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Email address is not valid']
         },
-        address: addressSchema,
+        address: { type: [addressSchema], null: true},
         phone: { type: [phoneSchema], null: true },
         products: { type: [productSchema], null: true}
     }, {
